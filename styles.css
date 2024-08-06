@@ -1,0 +1,323 @@
+/* Definição global de estilos */
+body, h1, h2, p, ul, li, form {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Estilos para o corpo do site */
+body {
+  background: linear-gradient(to right, #f7f7f7, #e1e1e1);
+  color: #333;
+  font-size: 16px;
+}
+
+/* Estilos para o cabeçalho */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para os títulos de nível 1 (h1) */
+h1 {
+  color: #fff;
+  font-size: 3.5rem;
+  margin-bottom: 0.5em;
+}
+
+/* Estilos para a barra de navegação */
+nav {
+  background-color: #444;
+  
+}
+
+/* Estilos para a lista de itens de navegação */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos para cada item de navegação */
+nav ul li {
+  margin: 0 15px;
+}
+
+/* Estilos para os links da barra de navegação */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f31212;
+}
+
+/* Estilos para a seção principal */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Estilos para os títulos de nível 2 (h2) */
+h2 {
+  color: #e74c3c;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+/* Estilos para parágrafos */
+p {
+  margin-bottom: 1em;
+  color: #555;
+}
+
+/* Estilos para a linha horizontal de separação */
+.sep {
+  background-color: #333;
+  border: none;
+  border-top: 3px solid #333;
+  margin: 20px 0;
+  width: 100%; /* Faz a linha ocupar toda a largura da tela */
+  margin: 0; /* Remove as margens */
+  padding: 0; /* Remove o preenchimento */
+
+}
+
+/* Estilos para rótulos de formulário */
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Estilos para campos de entrada de formulário */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Estilos para botões de envio de formulário */
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Estilos para o rodapé */
+footer {
+  background-color: #333;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  color: #fff;
+}
+
+/* Estilos para o texto no rodapé */
+footer p {
+  font-size: 14px;
+}
+
+/* Estilos para a logomarca */
+.logo {
+  position: justifay;
+  width: 150px;
+  height: auto;
+}
+
+.elemento-logo {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente, se necessário */
+  height: 100px; /* Ajuste conforme necessário */
+}
+
+/* Estilos para a caixa de pesquisa */
+.src-box {
+  font-size: 20px;
+  border: solid 0.25em #fff;
+  display: inline-block;
+  position: relative;
+  border-radius: 2.5em;
+}
+
+/* Estilos para o campo de pesquisa na caixa */
+.src-box input[type=text] {
+  font-family: inherit;
+  font-weight: bold;
+  color: #fff;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 2.5em;
+  transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 150ms;
+  float: right; 
+}
+
+.src-box input[type=text]:focus {
+  outline: none;
+}
+
+.src-box input[type=text]:focus,
+.src-box input[type=text]:not(:placeholder-shown) {
+  width: 18em;
+  transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.src-box input[type=text]:focus + button[type=reset],
+.src-box input[type=text]:not(:placeholder-shown) + button[type=reset] {
+  transform: rotate(-45deg) translateY(0);
+  transition: transform 150ms ease-out 800ms;
+}
+
+.src-box input[type=text]:focus + button[type=reset]::after,
+.src-box input[type=text]:not(:placeholder-shown) + button[type=reset]::after {
+  opacity: 1;
+  transition: top 150ms ease-out 950ms, right 150ms ease-out 950ms, opacity 150ms ease 950ms;
+}
+
+.src-box button[type=reset] {
+  background-color: transparent;
+  width: 1.4em;
+  height: 1.4em;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0.55em;
+  right: 0.55em;
+  transform: rotate(-45deg) translateY(2.2em);
+  transition: transform 150ms ease-out 150ms;
+}
+
+.src-box button[type=reset]::before,
+.src-box button[type=reset]::after {
+  content: "";
+  background-color: #fff;
+  width: 0.3em;
+  height: 1.4em;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.src-box button[type=reset]::after {
+  transform: rotate(90deg);
+  opacity: 0;
+  transition: transform 150ms ease-out, opacity 150ms ease-out;
+}
+
+
+/* Seletor múltiplo com a mesma formatação */
+.wrapper, .copyright {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilização de uma linha horizontal */
+hr {
+  margin: 30px 20px;
+  border-top: 2px solid #333;
+  
+}
+
+/* Estilização de uma lista não ordenada sem marcadores */
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Estilização de uma lista inline */
+.list-inline li {
+  display: inline-block;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilização para imagens de redes sociais */
+.rs {
+  margin-top: 10px;  
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
+}
+
+/* Container para imagens */
+.image-container {
+  display: flex;           /* Usa flexbox para layout */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center;     /* Alinha o conteúdo verticalmente */
+  margin-top: 20px;        /* Espaço acima do container */
+  width: 100%;             /* Ocupa toda a largura disponível */
+  max-width: 500px;        /* Limita a largura máxima do container */
+  height: auto;            /* Ajusta a altura automaticamente com base no conteúdo */
+  box-sizing: border-box;  /* Inclui padding e border no cálculo da largura e altura */
+  padding: 10px;           /* Adiciona espaço interno ao redor do conteúdo */
+}
+
+/* Estilos para as imagens dentro do container */
+.image-container img {
+  max-width: 100%; /* Ajusta a largura da imagem para não exceder o container */
+  height: auto;    /* Mantém a proporção da imagem */
+  display: block;  /* Remove o espaço em branco abaixo da imagem */
+}
+
+/* Estilização para botões */
+li, button {
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Estilização específica para uma lista de acessibilidade */
+ul.acess {
+  position: absolute;
+  right: 10px;
+  margin-top: 10px;
+}
+
+/* Estilização específica para o botão de acessibilidade */
+.toggleButton {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}

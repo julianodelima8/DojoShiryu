@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dojo Shiryu</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="elemento-logo">
+      <img class="logo" src="imagens/logo.png" alt="logo">
+      Dojo Shiryu 
+    </h1>
+    <div class="src-box">
+      <input type="text" placeholder="  ">
+      <button type="reset"></button>
+    </div>
+    <div>
+      <a href="https://www.facebook.com/" target="_blank">
+        <img src="imagens/fb logo.png" class="rs" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <img src="imagens/ig-logo.png" class="rs" alt="Instagram">
+      </a>
+      <a href="https:/blogspot.com/" target="_blank">
+        <img src="imagens/bg logo.png" class="rs" alt="Blog">
+      </a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="PaginaPrincipal.html">Página Inicial</a></li>
+      <li><a href="#">Confederação</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Técnico</a></li>
+      <li><a href="#">Arbitragem e esporte seguro</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="#">Transparência</a></li>
+      <li><a href="#">STJDK</a></li>
+    </ul>
+    <div>
+      <button id="toggleButton" onclick="toggleButtons()"> Acessibilidade</button>
+
+      <div id="buttonsContainer" style="display: none;">
+        <ul>
+          <li><a href="#" onclick="increaseFont()">Aumentar Fonte</a></li>
+          <li><a href="#" onclick="decreaseFont()">Diminuir Fonte</a></li>
+          <li><a href="#" onclick="toggleContrast()">Alternar Contraste</a></li>
+        </ul>
+      </div>
+  </nav>
+
+  <main>
+    <h2>Sobre</h2>
+    <p>
+      O karatê é uma arte marcial japonesa que combina técnicas de socos e chutes com filosofia de respeito e
+      disciplina. Além de melhorar a forma física, promove autocontrole e autoconfiança. É uma prática que exige
+      dedicação e desenvolve habilidades tanto mentais quanto físicas.
+    </p>
+    <hr class="sep">
+    <br>
+    <h2>Notícias</h2>
+    <div class="image-container">
+      <img id="myImage" src="imagens/imagem1.jpg" alt="Imagem 1">
+    </div>
+  </main>
+
+  <footer>
+    <p>Todos os direitos reservados &copy; 2023</p>
+  </footer>
+
+  <script>
+    // Função para trocar a imagem
+    function trocarImagem() {
+      var image = document.getElementById('myImage');
+      if (image.src.endsWith('imagem1.jpg')) {
+        image.src = 'imagens/imagem2.jpg';
+        image.alt = 'Imagem 2';
+      } else if (image.src.endsWith('imagem2.jpg')) {
+        image.src = 'imagens/imagem3.jpg';
+        image.alt = 'Imagem 3';
+      } else {
+        image.src = 'imagens/imagem1.jpg';
+        image.alt = 'Imagem 1';
+      }
+    }
+
+    // Chama a função de troca de imagem a cada 3 segundos
+    setInterval(trocarImagem, 3000); // 3000 milissegundos = 3 segundos
+
+    function toggleColorblindMode() {
+      document.body.classList.toggle('colorblind');
+    }
+
+    function increaseFont() {
+      var currentFontSize = parseInt(window.getComputedStyle(document.body).fontSize) || 16;
+      var newFontSize = currentFontSize + 2;
+      document.body.style.fontSize = newFontSize + "px";
+    }
+
+    function decreaseFont() {
+      var currentFontSize = parseInt(window.getComputedStyle(document.body).fontSize) || 16;
+      var newFontSize = currentFontSize - 2;
+      document.body.style.fontSize = newFontSize + "px";
+    }
+
+    function toggleContrast() {
+      document.body.classList.toggle("high-contrast");
+    }
+
+    function toggleButtons() {
+      var buttonsContainer = document.getElementById("buttonsContainer");
+      var toggleButton = document.getElementById("toggleButton");
+      if (buttonsContainer.style.display === "none") {
+        buttonsContainer.style.display = "block";
+        toggleButton.innerHTML = "Esconder Botões";
+      } else {
+        buttonsContainer.style.display = "none";
+        toggleButton.innerHTML = "Mostrar Botões";
+      }
+    }
+  </script>
+</body>
+
+</html>
